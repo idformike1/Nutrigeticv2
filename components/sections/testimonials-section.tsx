@@ -11,24 +11,25 @@ export function TestimonialsSection({ items }: TestimonialsSectionProps) {
   }
 
   return (
-    <section className="border-t border-border py-20 md:py-24 lg:py-30">
+    <section className="section-space border-t border-border/80">
       <Container>
         <div className="max-w-3xl">
-          <p className="text-sm font-medium uppercase tracking-[0.24em] text-primary">
-            What Our Clients Say
-          </p>
-          <h2 className="mt-6 text-h2 font-semibold text-balance">
+          <p className="section-kicker">What Our Clients Say</p>
+          <h2 className="section-title">
             Trust built through measurable, consistent support.
           </h2>
-          <p className="mt-6 text-body text-muted">Real results from real clients.</p>
+          <p className="section-copy">Real results from real clients.</p>
         </div>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
           {items.map((item) => (
-            <article key={`${item.name}-${item.quote}`} className="border border-border bg-white p-8">
+            <article
+              key={`${item.name}-${item.quote}`}
+              className="surface-card p-8 md:p-9"
+            >
               <p className="text-body text-foreground">{item.quote}</p>
               <div className="mt-8">
-                <p className="text-base font-medium">{item.name}</p>
+                <p className="text-base font-semibold tracking-[-0.01em]">{item.name}</p>
                 {item.context ? (
                   <p className="mt-1 text-sm text-muted">{item.context}</p>
                 ) : null}

@@ -5,9 +5,9 @@ import { navigation, siteConfig } from "@/lib/site";
 
 export function SiteFooter() {
   return (
-    <footer className="mt-16 border-t border-border bg-[#efede7]">
-      <Container className="py-16">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_0.8fr_1fr]">
+    <footer className="mt-20 border-t border-border/80 bg-backgroundAlt">
+      <Container className="py-18">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_0.8fr_1fr] lg:gap-12">
           <div className="max-w-sm">
             <p className="text-base font-semibold tracking-[-0.02em] text-foreground">
               {siteConfig.name}
@@ -22,7 +22,7 @@ export function SiteFooter() {
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-foreground">
               Company
             </p>
-            <nav className="mt-5 flex flex-col gap-3 text-sm text-muted">
+            <nav className="mt-5 flex flex-col gap-3.5 text-sm text-muted">
               {navigation.slice(0, 3).map((item) => (
                 <Link
                   key={item.href}
@@ -39,7 +39,7 @@ export function SiteFooter() {
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-foreground">
               Resources
             </p>
-            <nav className="mt-5 flex flex-col gap-3 text-sm text-muted">
+            <nav className="mt-5 flex flex-col gap-3.5 text-sm text-muted">
               {navigation.slice(3).map((item) => (
                 <Link
                   key={item.href}
@@ -56,7 +56,7 @@ export function SiteFooter() {
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-foreground">
               Contact
             </p>
-            <div className="mt-5 flex flex-col gap-3 text-sm text-muted">
+            <div className="mt-5 flex flex-col gap-3.5 text-sm text-muted">
               <a
                 href={`tel:${siteConfig.phone.replace(/[^\d+]/g, "")}`}
                 className="transition-colors hover:text-foreground"
@@ -76,7 +76,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-4 border-t border-border pt-6 text-sm text-muted md:flex-row md:items-center md:justify-between">
+        <div className="mt-12 flex flex-col gap-4 border-t border-border/80 pt-6 text-sm text-muted md:flex-row md:items-center md:justify-between">
           <p>© 2026 {siteConfig.name}. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="/privacy" className="transition-colors hover:text-foreground">

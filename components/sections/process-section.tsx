@@ -30,16 +30,14 @@ const steps = [
 
 export function ProcessSection() {
   return (
-    <section className="border-t border-border py-20 md:py-24 lg:py-30">
+    <section className="section-space border-t border-border/80">
       <Container>
         <div className="max-w-3xl">
-          <p className="text-sm font-medium uppercase tracking-[0.24em] text-primary">
-            How It Works
-          </p>
-          <h2 className="mt-6 text-h2 font-semibold text-balance">
+          <p className="section-kicker">How It Works</p>
+          <h2 className="section-title">
             A clear process from consultation to measurable progress.
           </h2>
-          <p className="mt-6 max-w-2xl text-body text-muted">
+          <p className="section-copy">
             A simple, guided process designed to help you achieve your
             nutrition goals with clarity and consistency.
           </p>
@@ -47,19 +45,19 @@ export function ProcessSection() {
 
         <div className="mt-14 grid gap-x-6 gap-y-10 md:grid-cols-2 xl:grid-cols-5">
           {steps.map((step, index) => (
-            <article key={step.number} className="relative">
+            <article key={step.number} className="relative rounded-2xl bg-white/50 p-1">
               <div className="flex items-center gap-4">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-border bg-white text-sm font-medium text-primary">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-border/80 bg-white text-sm font-semibold text-primary shadow-soft">
                   {step.number}
                 </div>
                 {index < steps.length - 1 ? (
                   <span
-                    className="hidden h-px flex-1 bg-border xl:block"
+                    className="hidden h-px flex-1 bg-border/80 xl:block"
                     aria-hidden="true"
                   />
                 ) : null}
               </div>
-              <h3 className="mt-6 text-lg font-medium">{step.title}</h3>
+              <h3 className="mt-6 text-lg font-semibold tracking-[-0.02em]">{step.title}</h3>
               <p className="mt-3 max-w-[16rem] text-sm leading-7 text-muted">
                 {step.description}
               </p>

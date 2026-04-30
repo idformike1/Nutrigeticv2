@@ -16,10 +16,10 @@ export function Button({
   variant = "primary"
 }: ButtonProps) {
   const styles = cn(
-    "inline-flex items-center justify-center whitespace-nowrap rounded-md border px-6 py-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+    "inline-flex min-h-11 items-center justify-center whitespace-nowrap rounded-xl border px-5 py-3 text-sm font-semibold tracking-[-0.01em] transition-[background-color,border-color,color,box-shadow] duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background",
     variant === "primary"
-      ? "border-primary bg-primary text-white hover:bg-[#183122]"
-      : "border-border bg-transparent text-foreground hover:border-primary hover:text-primary",
+      ? "border-primary bg-primary text-white shadow-soft hover:bg-[#183122] hover:shadow-card"
+      : "border-border/90 bg-white/80 text-foreground hover:border-primary/45 hover:bg-white hover:text-primary",
     className
   );
 

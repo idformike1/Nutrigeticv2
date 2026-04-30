@@ -13,26 +13,24 @@ export function GallerySection({ items }: GallerySectionProps) {
   }
 
   return (
-    <section className="py-20 md:py-24 lg:py-30">
+    <section className="section-space">
       <Container>
         <div className="max-w-3xl">
-          <p className="text-sm font-medium uppercase tracking-[0.24em] text-primary">
-            Our Work &amp; Community
-          </p>
+          <p className="section-kicker">Our Work &amp; Community</p>
         </div>
 
         <div className="mt-14 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {items.map((item) => (
             <div
               key={item.src}
-              className="overflow-hidden rounded-2xl border border-border bg-white"
+              className="surface-card overflow-hidden"
             >
               <Image
                 src={item.src}
                 alt={item.alt}
                 width={800}
                 height={960}
-                className="aspect-[4/5] h-auto w-full object-cover transition-transform hover:scale-[1.01]"
+                className="aspect-[4/5] h-auto w-full object-cover transition-transform duration-300 hover:scale-[1.01]"
               />
             </div>
           ))}

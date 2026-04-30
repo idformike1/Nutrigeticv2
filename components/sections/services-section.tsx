@@ -21,16 +21,14 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="py-20 md:py-24 lg:py-30">
+    <section className="section-space">
       <Container>
         <div className="max-w-3xl">
-          <p className="text-sm font-medium uppercase tracking-[0.24em] text-primary">
-            Our Services
-          </p>
-          <h2 className="mt-6 text-h2 font-semibold text-balance">
+          <p className="section-kicker">Our Services</p>
+          <h2 className="section-title">
             Structured support for performance, health, and long-term progress.
           </h2>
-          <p className="mt-6 max-w-2xl text-body text-muted">
+          <p className="section-copy">
             Personalized nutrition solutions designed for performance, health,
             and long-term results.
           </p>
@@ -40,7 +38,7 @@ export function ServicesSection() {
           {services.map((service) => (
             <article
               key={service.title}
-              className="flex h-full flex-col justify-between border border-border bg-white p-8"
+              className="surface-card flex h-full flex-col justify-between p-8 md:p-9"
             >
               <div>
                 <h3 className="text-h3 font-medium">{service.title}</h3>

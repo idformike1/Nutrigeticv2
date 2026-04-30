@@ -20,7 +20,7 @@
     background: #f7f6f2;
     color: #111111;
     font-family: var(--font-sans), sans-serif;
-    line-height: 1.6;
+    line-height: 1.65;
     text-rendering: optimizeLegibility;
   }
 
@@ -39,6 +39,10 @@
     color: inherit;
     text-decoration: none;
   }
+
+  img {
+    display: block;
+  }
 }
 
 @layer utilities {
@@ -48,8 +52,40 @@
 }
 
 @layer components {
+  .section-space {
+    @apply py-20 md:py-24 lg:py-28;
+  }
+
+  .section-space-tight {
+    @apply py-10 md:py-12;
+  }
+
+  .section-kicker {
+    @apply text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-primary;
+  }
+
+  .section-title {
+    @apply mt-5 text-h2 font-semibold text-balance text-foreground;
+  }
+
+  .page-title {
+    @apply mt-5 text-h1 font-semibold text-balance text-foreground;
+  }
+
+  .section-copy {
+    @apply mt-5 max-w-2xl text-body text-muted;
+  }
+
+  .surface-card {
+    @apply rounded-2xl border border-border/90 bg-surface shadow-soft;
+  }
+
+  .surface-panel {
+    @apply rounded-[28px] border border-border/90 bg-surface shadow-card;
+  }
+
   .rich-text {
-    @apply mt-12 max-w-none;
+    @apply mt-14 max-w-none;
   }
 
   .rich-text h2 {
